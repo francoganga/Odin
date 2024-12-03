@@ -152,7 +152,7 @@ pop :: proc(array: ^$T/[dynamic]$E, loc := #caller_location) -> (res: E) #no_bou
 }
 
 
-// `pop_safe` trys to remove and return the end value of dynamic array `array` and reduces the length of `array` by 1.
+// `pop_safe` tries to remove and return the end value of dynamic array `array` and reduces the length of `array` by 1.
 // If the operation is not possible, it will return false.
 @builtin
 pop_safe :: proc "contextless" (array: ^$T/[dynamic]$E) -> (res: E, ok: bool) #no_bounds_check {
@@ -178,7 +178,7 @@ pop_front :: proc(array: ^$T/[dynamic]$E, loc := #caller_location) -> (res: E) #
 	return res
 }
 
-// `pop_front_safe` trys to return and remove the first value of dynamic array `array` and reduces the length of `array` by 1.
+// `pop_front_safe` tries to return and remove the first value of dynamic array `array` and reduces the length of `array` by 1.
 // If the operation is not possible, it will return false.
 @builtin
 pop_front_safe :: proc "contextless" (array: ^$T/[dynamic]$E) -> (res: E, ok: bool) #no_bounds_check {
